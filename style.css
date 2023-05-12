@@ -10,7 +10,7 @@
     background-color: antiquewhite;
 }
 
-
+/* Titoli */
 #title{
     font-size: 20px;
     margin: 20px 0;
@@ -28,6 +28,7 @@ p{
     line-height: 20px;
 }
 
+/* Parte riguardante le cards */
 #team-images{
     display: flex;
     flex-wrap: wrap;
