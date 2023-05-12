@@ -33,7 +33,7 @@ const teamArray = [
         "immagine": "scott-estrada-developer.jpg"
     },
     {
-        "mome": "Barbara Ramos",
+        "nome": "Barbara Ramos",
         "posizione": "Graphic Designer",
         "immagine": "barbara-ramos-graphic-designer.jpg"
     },
