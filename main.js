@@ -8,9 +8,9 @@ const team = document.getElementById("team-images")
 
 const teamArray = [
     {
-        "nome" : "Wayne Barnett",
-        "posizione" : "Founder & CEO",
-        "immagine" : "wayne-barnett-founder-ceo.jpg"
+        "nome": "Wayne Barnett",
+        "posizione": "Founder & CEO",
+        "immagine": "wayne-barnett-founder-ceo.jpg"
     },
     {
         "nome": "Angela Caroll",
@@ -53,21 +53,40 @@ for (let i = 0; i < teamArray.length; i++) {
 for (let i = 0; i < teamArray.length; i++) {
 
     // Definisco l'oggetto di riferimento
-    let oggetto = teamArray[i] 
+    let oggetto = teamArray[i]
 
     // Creo un elemento div
     let div = document.createElement("div")
 
     // Aggiungo una classe all'elemento div
-    div.classList.add("col-md-3")
+    div.classList.add("col-md-4")
 
-    for(let key in oggetto){
-        div.append((oggetto[key]))
-    }
+    // Creo un elemento div per l'immagine del partecipante del team
+    let divImage = document.createElement("div")
+    divImage.classList.add("image-container")
+    divImage.innerHTML = `<img src="img/${(oggetto.immagine)}" alt="immagine${i}">`
+
+    // Creo un elemento div per inserire il nome e il ruolo
+    let info = document.createElement("div")
+    info.classList.add("white")
+
+        // Creo un elemento h5 
+        let nome = document.createElement("h5")
+        nome.append((oggetto.nome))
+
+        // Creo un elemento p 
+        let ruolo = document.createElement("p")
+        ruolo.append((oggetto.posizione))
+
+  
+    info.append(nome,ruolo)
+
+    // Aggiungo i comandi alla variabile div
+    div.append(divImage, info)
 
     // Aggiungo i comandi alla pagina HTML
     team.appendChild(div)
+
 }
 
-console.log(team);
 
